@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantWebsite </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% load static %}
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <nav>
+        <div><img src="{% static 'OIP.jpeg' %}" alt="logo" height="30px"/></div>
+
+        <div>
+            <a href="{% url 'about' %}">About</a>
+            <a href="features.html"> Features </a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign In</a>
+            <a href="login.html">Log In</a>
+        </div>
+
+    </nav>
+    <h1>
+        Website for Plant Diagnosis and Treatment <br>
+        <img src="{% static 'hero-phone-en.jpg' %}" alt="Welcome" class="img" width="190px">
+    </h1>
+    <div>
+        <form id="searchForm" action="find" method="get" target="_blank">
+
+            <input type="file" id="imageInput" name="image" accept="image/*">
+            <button id="find" type="submit">Find</button>
+        </form>
+    </div>
+    <p>
+        We helps diagnose and treat crop problems, improve productivity and provide farming knowledge. Achieve your farming goals and improve your agricultural experience with us.
+    <ol></ol>Diagnose and treat crop problems
+    <ol></ol> Find the right treatment
+    <ol></ol>Get expert advice
+    </p>
+    <img src="{% static 'Leaf spot disease.jpg' %}" alt="image" class="img1" width ="249px">
+
+
+
+
+
+
+
+
+</body>
+<h3>
+    <div>
+        <a href="knowmore.html">Know More</a>
+    </div>
+
+</h3>
+<footer>
+    Copyright © 2024 All rights reserved.
+</footer>
+
+</html>
+
