@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import glob
 import cv2
 import tensorflow as tf
-from tensorflow.keras.layers import BatchNormalization
+#from tensorflow.keras.layers import BatchNormalization
 from keras.models import Model, Sequential
 from keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 import os
@@ -14,12 +14,12 @@ from sklearn.metrics import confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 
-print(os.listdir("C:/Users/surya/Downloads/archive/"))
+print(os.listdir("./archive"))
 
 SIZE = 64
 train_images = []
 train_labels = []
-for directory_path in glob.glob("C:/Users/surya/Downloads/archive.zip/BananaLSD/OriginalSet/*"):
+for directory_path in glob.glob("./archive/BananaLSD/OriginalSet/*"):
     label = directory_path.split("\\")[-1]
     print(label)
     for img_path in glob.glob(os.path.join(directory_path, "*.jpeg")):
@@ -33,7 +33,7 @@ train_labels = np.array(train_labels)
 
 test_images = []
 test_labels = []
-for directory_path in glob.glob("C:/Users/surya/Downloads/archive.zip/BananaLSD/AugmentedSet/*"):
+for directory_path in glob.glob("./archive/BananaLSD/AugmentedSet/*"):
     fruit_label = directory_path.split("\\")[-1]
     for img_path in glob.glob(os.path.join(directory_path, "*.jpeg")):
         img = cv2.imread(img_path, cv2.IMREAD_COLOR)
